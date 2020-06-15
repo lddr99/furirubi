@@ -12,5 +12,6 @@ module Furirubi
 
   def self.parse(search_term)
     words = translator.translate(search_term)
+    words[search_term] = '' if words.size.zero?
   end
 end
